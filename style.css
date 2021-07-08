@@ -1,0 +1,400 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: auto;
+}
+
+#displayWindow {
+    display: flex;
+}
+
+#drawButtonList {
+    margin-bottom: 0 !important;
+    padding: 10px;
+    /* width: 300px;
+    height: 900px; */
+}
+
+.controls {
+    height: 880px;
+    width: 280px;
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.controls label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.table-control {
+    height: fit-content;
+    background: none;
+}
+
+.bar {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+}
+
+.bar button {
+    font-weight: bold;
+    padding: 4px 8px;
+    border: none;
+    background: none;
+    border-top: none;
+    /* border-radius: 12px; */
+}
+
+/* .table-control button:hover {
+    color: white;
+    background: dodgerblue;
+} */
+
+.bar button:focus {
+    outline: none;
+}
+
+.current {
+    /* color: white; */
+    /* background: dodgerblue !important; */
+}
+
+#color_window {
+    pointer-events: none;
+}
+
+#hitpoint {
+    font-size: 15px !important;
+}
+
+#controls .div {
+    margin-bottom: 10px;
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 10px;
+    background: lightgrey;
+    outline: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: dodgerblue;
+    opacity: 0.7;
+    transition: .3s opacity ease-in-out;
+    box-shadow: 2px 2px 4px black;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 32px;
+}
+
+.switch input { display:none; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+input:checked + .slider {
+    background-color: dodgerblue;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px dodgerblue;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(168px);
+    -ms-transform: translateX(168px);
+    transform: translateX(168px);
+}
+
+.on {
+    display: none;
+}
+
+.on, .off {
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .on {
+    display: block;
+}
+
+input:checked + .slider .off {
+    display: none;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#legend {
+    height: 40px;
+    width: 250px;
+}
+
+.court {
+    width: 350px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.dot {
+    margin-right: 4px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#opponent-dot {
+    background-color: crimson;
+}
+
+#player-dot {
+    background-color: royalblue;
+}
+
+.hitmap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#right-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+video {
+    margin-top: 10px;
+    width: 700px;
+    height: 395px;
+}
+
+#lists {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-container {
+    width: 350px;
+    min-width: 350px;
+    height: 450px;
+    overflow-y: auto;
+}
+
+/* .tables {
+    display: flex;
+    width: 100%;
+    margin: 20px 10px;
+} */
+
+.table-container {
+    height: 500px;
+    overflow-y: auto;
+}
+/* #varietyList {
+    height: 500px;
+ } */
+ #entropyList {
+    display: flex;
+ }
+ #leftEntropyList {
+   width: 50%;
+}
+#rightEntropyList {
+    width: 50%;
+ }
+
+ td, th {
+    white-space: initial !important;
+    text-overflow: unset !important;
+ }
+
+.col {
+    margin-top: 10px;
+}
+
+.col, .container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.col label, .container label {
+    margin-right: 8px;
+}
+
+.checkbox {
+    margin-right: 4px;
+}
+
+.form-top{
+    width: 220px;
+    margin: 10px 0 20px 0;
+}
+
+.form-bot {
+    width: 220px;
+    margin-top: 10px; 
+}
+
+.form-control {
+    height: 36px;
+    padding: 0 2px;
+}
+
+#setSelect,
+#setSelectRight {
+    width: auto !important;
+}
+
+#hitpointLocationSelect {
+    margin: 0;
+}
+
+#velocity {
+    height: 90px;
+    padding: 10px;
+}
+
+#velocity label {
+    font-weight: bold;
+}
+
+table {
+    position: relative;
+    cursor: default;
+}
+
+td, th {
+    padding: 8px 4px !important;
+    max-width: 90px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.density-table {
+    height: 201px;
+    width: 180px;
+}
+
+.density-table div {
+    display: flex;
+}
+
+.row0 {
+    width: 180px;
+    height: 33px;
+}
+
+.row1 {
+    width: 180px;
+    height: 99px;
+}
+
+.row2 {
+    width: 180px;
+    height: 69px;
+}
+
+.col0, .col2 {
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    border: 0.5px solid black;
+}
+
+.col1 {
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    border: 0.5px solid black;
+}
+
+text {
+    user-select: none;
+}
+
+#histogram {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+    background: white;
+    z-index: 5;
+}
